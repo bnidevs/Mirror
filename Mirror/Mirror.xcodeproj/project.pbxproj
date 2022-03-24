@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801AB98727ED1F620005245E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801AB98627ED1F620005245E /* Assets.xcassets */; };
 		8079EB9C27ED13B00028C478 /* MirrorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EB9B27ED13B00028C478 /* MirrorApp.swift */; };
 		8079EB9E27ED13B00028C478 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EB9D27ED13B00028C478 /* ContentView.swift */; };
 		8079EBA327ED13B00028C478 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8079EBA227ED13B00028C478 /* Preview Assets.xcassets */; };
 		8079EBAB27ED14070028C478 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBAA27ED14070028C478 /* Camera.swift */; };
 		8079EBAE27ED14150028C478 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBAC27ED14150028C478 /* Permissions.swift */; };
 		8079EBAF27ED14150028C478 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBAD27ED14150028C478 /* StatusBar.swift */; };
-		8079EBB327ED149C0028C478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8079EBB227ED149C0028C478 /* Assets.xcassets */; };
 		8079EBB627ED1A740028C478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBB527ED1A740028C478 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		801AB98627ED1F620005245E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8079EB9827ED13B00028C478 /* Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8079EB9B27ED13B00028C478 /* MirrorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorApp.swift; sourceTree = "<group>"; };
 		8079EB9D27ED13B00028C478 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		8079EBAA27ED14070028C478 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		8079EBAC27ED14150028C478 /* Permissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		8079EBAD27ED14150028C478 /* StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
-		8079EBB227ED149C0028C478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../AutoGIF-Swift/AutoCam/AutoCam/Assets.xcassets"; sourceTree = "<group>"; };
 		8079EBB427ED14E10028C478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8079EBB527ED1A740028C478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,9 +61,9 @@
 		8079EB9A27ED13B00028C478 /* Mirror */ = {
 			isa = PBXGroup;
 			children = (
+				801AB98627ED1F620005245E /* Assets.xcassets */,
 				8079EBB427ED14E10028C478 /* Info.plist */,
 				8079EB9B27ED13B00028C478 /* MirrorApp.swift */,
-				8079EBB227ED149C0028C478 /* Assets.xcassets */,
 				8079EB9D27ED13B00028C478 /* ContentView.swift */,
 				8079EBAA27ED14070028C478 /* Camera.swift */,
 				8079EBA427ED13B00028C478 /* Mirror.entitlements */,
@@ -141,8 +141,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801AB98727ED1F620005245E /* Assets.xcassets in Resources */,
 				8079EBA327ED13B00028C478 /* Preview Assets.xcassets in Resources */,
-				8079EBB327ED149C0028C478 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
