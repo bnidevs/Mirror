@@ -14,6 +14,7 @@
 		8079EBAE27ED14150028C478 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBAC27ED14150028C478 /* Permissions.swift */; };
 		8079EBAF27ED14150028C478 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBAD27ED14150028C478 /* StatusBar.swift */; };
 		8079EBB327ED149C0028C478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8079EBB227ED149C0028C478 /* Assets.xcassets */; };
+		8079EBB627ED1A740028C478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8079EBB527ED1A740028C478 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8079EBAD27ED14150028C478 /* StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		8079EBB227ED149C0028C478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../AutoGIF-Swift/AutoCam/AutoCam/Assets.xcassets"; sourceTree = "<group>"; };
 		8079EBB427ED14E10028C478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8079EBB527ED1A740028C478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				8079EBAC27ED14150028C478 /* Permissions.swift */,
 				8079EBAD27ED14150028C478 /* StatusBar.swift */,
 				8079EBA127ED13B00028C478 /* Preview Content */,
+				8079EBB527ED1A740028C478 /* AppDelegate.swift */,
 			);
 			path = Mirror;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8079EBB627ED1A740028C478 /* AppDelegate.swift in Sources */,
 				8079EBAF27ED14150028C478 /* StatusBar.swift in Sources */,
 				8079EBAE27ED14150028C478 /* Permissions.swift in Sources */,
 				8079EB9E27ED13B00028C478 /* ContentView.swift in Sources */,

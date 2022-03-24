@@ -34,6 +34,7 @@ class PlayerView: NSView {
         previewLayer?.contentsGravity = .resizeAspectFill
         previewLayer?.videoGravity = .resizeAspectFill
         previewLayer?.connection?.automaticallyAdjustsVideoMirroring = false
+        previewLayer?.connection?.isVideoMirrored = true
         layer = previewLayer
     }
 

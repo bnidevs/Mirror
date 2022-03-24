@@ -41,10 +41,10 @@ class StatusBarController {
     }
     
     func showPopover(_ sender: AnyObject) {
+        feedObj.startRunning()
         if let statusBarButton = statusItem.button {
             popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
         }
-        feedObj.startRunning()
     }
     
     func hidePopover(_ sender: AnyObject) {
