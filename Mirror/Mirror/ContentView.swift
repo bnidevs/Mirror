@@ -13,8 +13,19 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Image(nsImage: NSImage(imageLiteralResourceName: "MenuBarIcon"))
+                Text("irror")
+                    .font(.system(size: 18, weight: .bold))
+                    .padding([.leading], -9)
+                    .padding([.top], 3)
+                Spacer()
+                Button("Quit", action: {NSApp.terminate(nil)})
+            }.frame(width: 400, height: 25, alignment: .topLeading)
             PlayerContainerView(captureSession: camfeed)
-        }.frame(width: 400, height: 225, alignment: .center)
+            .frame(width: 400, height: 225, alignment: .center)
+            .cornerRadius(5)
+        }.frame(width: 420, height: 280, alignment: .center)
     }
 }
 

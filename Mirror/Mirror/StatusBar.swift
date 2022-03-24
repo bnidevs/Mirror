@@ -24,7 +24,7 @@ class StatusBarController {
         
         if let statusBarButton = statusItem.button {
             statusBarButton.image = NSImage(imageLiteralResourceName: "MenuBarIcon")
-            statusBarButton.image?.size = NSSize(width: 30.0, height: 20.0)
+            statusBarButton.image?.size = NSSize(width: 28.0, height: 18.0)
             statusBarButton.image?.isTemplate = false
             statusBarButton.action = #selector(togglePopover(sender:))
             statusBarButton.target = self

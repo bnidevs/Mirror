@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "MirrorLogo-1.png 17-11-14-336.png",
+      "filename" : "MirrorLogo-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "MirrorLogo-1.png 17-11-14-337.png",
+      "filename" : "MirrorLogo-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "MirrorLogo-1.png 17-11-14-338.png",
+      "filename" : "MirrorLogo.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
