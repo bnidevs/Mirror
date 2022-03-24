@@ -1,0 +1,15 @@
+name: XCode
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Remove Code Sign Identity
+        run: sed -i .bak 's/Mac Developer/-/g' ./AutoGIF\ Spooler/AutoGIF\ Spooler.xcodeproj/project.pbxproj
+      - name: Build
+        run: xcodebuild -scheme "Mirror" -project Mirror/Mirror.xcodeproj build
