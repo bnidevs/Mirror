@@ -11,10 +11,12 @@ import AVFoundation
 struct ContentView: View {
     @Binding var camfeed: AVCaptureSession
     
+    var nsimg = NSImage(imageLiteralResourceName: "MenuBarIcon")
+    
     var body: some View {
         VStack {
             HStack {
-                Image(nsImage: NSImage(imageLiteralResourceName: "MenuBarIcon"))
+                Image(nsImage: nsimg)
                 Text("irror")
                     .font(.system(size: 18, weight: .bold))
                     .padding([.leading], -9)
