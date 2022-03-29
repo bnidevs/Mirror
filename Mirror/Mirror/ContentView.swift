@@ -8,22 +8,35 @@
 import SwiftUI
 import AVFoundation
 
+class MenuIcon {
+    var nsimg: NSImage
+
+    init(){
+        nsimg = NSImage(imageLiteralResourceName: "MenuBarIcon")
+        nsimg.isTemplate = true
+    }
+}
+
 struct ContentView: View {
     @Binding var camfeed: AVCaptureSession
     
-    var nsimg = NSImage(imageLiteralResourceName: "MenuBarIcon")
+    var menuicon = MenuIcon()
     
     var body: some View {
         VStack {
             HStack {
-                Image(nsImage: nsimg)
+                Image(nsImage: menuicon.nsimg)
+                    .resizable()
+                    .frame(width: 30, height: 32, alignment: .center)
+                    .padding([.leading], -4)
+                    .padding([.top], 2)
                 Text("irror")
                     .font(.system(size: 18, weight: .bold))
-                    .padding([.leading], -9)
-                    .padding([.top], 3)
+                    .padding([.leading], -12)
+                    .padding([.top], 1)
                 Spacer()
                 Button("Quit", action: {NSApp.terminate(nil)})
-            }.frame(width: 400, height: 25, alignment: .topLeading)
+            }.frame(width: 400, height: 25, alignment: .center)
             PlayerContainerView(captureSession: camfeed)
             .frame(width: 400, height: 225, alignment: .center)
             .cornerRadius(5)

@@ -11,20 +11,18 @@ import AVFoundation
 
 class StatusBarController {
     
-    private var statusBar: NSStatusBar
     private var statusItem: NSStatusItem
     private var popover: NSPopover
     private var feedObj: AVCaptureSession
     
     init(_ popover: NSPopover, feedIn: AVCaptureSession) {
         self.popover = popover
-        statusBar = NSStatusBar.init()
-        statusItem = statusBar.statusItem(withLength: 28.0)
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         feedObj = feedIn
         
         if let statusBarButton = statusItem.button {
             statusBarButton.image = NSImage(imageLiteralResourceName: "MenuBarIcon")
-            statusBarButton.image?.size = NSSize(width: 28.0, height: 18.0)
+            statusBarButton.image?.size = NSSize(width: NSStatusBar.system.thickness, height: NSStatusBar.system.thickness)
             statusBarButton.image?.isTemplate = true
             statusBarButton.action = #selector(togglePopover(sender:))
             statusBarButton.target = self
