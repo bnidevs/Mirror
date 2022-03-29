@@ -6,7 +6,7 @@ on:
     - 'V*'
 
 jobs:
-  build:
+  release:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,14 +14,15 @@ jobs:
         run: sed -i .bak 's/Mac Developer/-/g' ./Mirror/Mirror.xcodeproj/project.pbxproj
       - name: Build
         run: xcodebuild -scheme "Mirror" -project Mirror/Mirror.xcodeproj build
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-    - uses: actions/checkout@v2
-    - uses: ncipollo/release-action@v1
-      with:
-        draft: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Export
+        run: |
+          mkdir ./archives
+          xcodebuild -scheme "Mirror" -archivePath "./archives/Mirror.xcarchive" archive
+          xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist "/exopt.plist" -exportPath "./archives"
+      - name: Compress
+        run: zip -r -X Mirror.zip ./archives/Mirror.app
+      - uses: softprops/action-gh-release@v1
+      - name: Release
+        with:
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          files: ./archives/Mirror.zip
