@@ -16,6 +16,7 @@ jobs:
         run: xcodebuild -scheme "Mirror" -project Mirror/Mirror.xcodeproj build
       - name: Export
         run: |
+          cd Mirror
           mkdir ./archives
           xcodebuild -scheme "Mirror" -archivePath "./archives/Mirror.xcarchive" archive
           xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist "/exopt.plist" -exportPath "./archives"
