@@ -21,8 +21,8 @@ jobs:
           xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist "/exopt.plist" -exportPath "./archives"
       - name: Compress
         run: zip -r -X Mirror.zip ./archives/Mirror.app
-      - uses: softprops/action-gh-release@v1
       - name: Release
+        uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           files: ./archives/Mirror.zip
