@@ -14,12 +14,12 @@ jobs:
         run: sed -i .bak 's/Mac Developer/-/g' ./Mirror/Mirror.xcodeproj/project.pbxproj
       - name: Build
         run: xcodebuild -scheme "Mirror" -project Mirror/Mirror.xcodeproj build
-      - name: Export
+      - name: Archive
         run: |
-          cd Mirror
           mkdir ./archives
-          xcodebuild -scheme "Mirror" -archivePath "./archives/Mirror.xcarchive" archive
-          xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist "/exopt.plist" -exportPath "./archives"
+          xcodebuild -scheme "Mirror" -archivePath "./archives/Mirror.xcarchive" -project Mirror/Mirror.xcodeproj archive  
+      - name: Export
+        run: xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist exopt.plist -exportPath "./archives"
       - name: Compress
         run: zip -r -X Mirror.zip ./archives/Mirror.app
       - name: Release
