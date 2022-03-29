@@ -6,8 +6,16 @@ on:
     - 'V*'
 
 jobs:
-
   build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Remove Code Sign Identity
+        run: sed -i .bak 's/Mac Developer/-/g' ./Mirror/Mirror.xcodeproj/project.pbxproj
+      - name: Build
+        run: xcodebuild -scheme "Mirror" -project Mirror/Mirror.xcodeproj build
+  release:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
