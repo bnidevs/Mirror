@@ -24,6 +24,7 @@ jobs:
         run: |
           npm install --global create-dmg
           create-dmg ./archives/Mirror.app ./archives
+        continue-on-error: true
       - name: Compress
         run: zip -r -X ./archives/Mirror.zip ./archives/Mirror.app
       - name: Release
