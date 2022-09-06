@@ -20,10 +20,16 @@ jobs:
           xcodebuild -scheme "Mirror" -archivePath "./archives/Mirror.xcarchive" -project Mirror/Mirror.xcodeproj archive  
       - name: Export
         run: xcodebuild -exportArchive -archivePath "./archives/Mirror.xcarchive/" -exportOptionsPlist exopt.plist -exportPath "./archives"
+      - name: Create DMG
+        run: |
+          npm install --global create-dmg
+          create-dmg ./archives/Mirror.app ./archives/Mirror.dmg
       - name: Compress
         run: zip -r -X ./archives/Mirror.zip ./archives/Mirror.app
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          files: ./archives/Mirror.zip
+          files: |
+            ./archives/Mirror.zip
+            ./archives/Mirror.dmg
