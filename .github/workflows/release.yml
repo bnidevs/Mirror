@@ -23,7 +23,7 @@ jobs:
       - name: Create DMG
         run: |
           npm install --global create-dmg
-          create-dmg ./archives/Mirror.app ./archives/Mirror.dmg
+          create-dmg ./archives/Mirror.app ./archives
       - name: Compress
         run: zip -r -X ./archives/Mirror.zip ./archives/Mirror.app
       - name: Release
