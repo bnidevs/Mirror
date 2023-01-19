@@ -69,7 +69,7 @@ class PlayerView: NSView {
     }
 }
 
-final class PlayerContainerView: NSViewRepresentable {
+struct PlayerContainerView: NSViewRepresentable {
     typealias NSViewType = PlayerView
 
     let captureSession: AVCaptureSession
